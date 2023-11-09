@@ -1,0 +1,82 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "./types/nitro-imports"
+      ],
+      "#paths": [
+        "../../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.8.1_eslint@7.32.0_rollup@2.79.1_typescript@5.2.2_vite@4.5.0/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "./.."
+      ],
+      "~/*": [
+        "../*"
+      ],
+      "@": [
+        "./.."
+      ],
+      "@/*": [
+        "../*"
+      ],
+      "~~": [
+        "./.."
+      ],
+      "~~/*": [
+        "../*"
+      ],
+      "@@": [
+        "./.."
+      ],
+      "@@/*": [
+        "../*"
+      ],
+      "assets": [
+        "../assets"
+      ],
+      "public": [
+        "../public"
+      ],
+      "public/*": [
+        "../public/*"
+      ],
+      "@ui": [
+        "../../../packages/ui/src"
+      ],
+      "@ui/*": [
+        "../../../packages/ui/src/*"
+      ],
+      "pinia": [
+        "../../../packages/pinia-store/node_modules/pinia/dist/pinia"
+      ]
+    }
+  },
+  "include": [
+    "./types/nitro-nuxt.d.ts",
+    "../../../node_modules/.pnpm/registry.npmmirror.com+@pinia+nuxt@0.5.1_rollup@2.79.1_typescript@5.2.2_vue@3.3.8/node_modules/@pinia/nuxt/runtime/server",
+    "../../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+devtools@1.0.0_nuxt@3.8.1_rollup@2.79.1_vite@4.5.0/node_modules/@nuxt/devtools/runtime/server",
+    "../../../node_modules/.pnpm/registry.npmmirror.com+@unocss+nuxt@0.57.2_postcss@8.4.31_rollup@2.79.1_vite@4.5.0_webpack@5.89.0/node_modules/@unocss/nuxt/runtime/server",
+    "../../../node_modules/.pnpm/registry.npmmirror.com+@vite-pwa+nuxt@0.1.2_@nuxt+kit@3.8.1_vite-plugin-pwa@0.16.7/node_modules/@vite-pwa/nuxt/runtime/server",
+    "../../../node_modules/.pnpm/registry.npmmirror.com+@element-plus+nuxt@1.0.6_@element-plus+icons-vue@2.1.0_element-plus@2.4.2_rollup@2.79.1/node_modules/@element-plus/nuxt/runtime/server",
+    "../../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+telemetry@2.5.2_rollup@2.79.1/node_modules/@nuxt/telemetry/runtime/server",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.8.1_eslint@7.32.0_rollup@2.79.1_typescript@5.2.2_vite@4.5.0/node_modules/nuxt/node_modules",
+    "../dist"
+  ]
+}
