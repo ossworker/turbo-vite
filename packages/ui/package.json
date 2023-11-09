@@ -9,9 +9,13 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --ignore-path .gitignore"
   },
   "devDependencies": {
+    "@pinia/testing": "^0.1.3",
+    "@vitest/ui": "^0.34.6",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
+    "pinia": "^2.1.7",
     "tsconfig": "workspace:*",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vitest": "^0.34.6"
   }
 }
