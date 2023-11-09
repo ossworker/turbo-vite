@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"name": "ROOT",
+			"path": "."
+		},
+		{
+			"path": "apps/nuxt"
+		},
+        {
+			"path": "apps/storybook"
+		},
+		{
+			"path": "packages/eslint-config-custom",
+		},
+		{
+			"path": "packages/tsconfig"
+		},
+		{
+			"path": "packages/pinia-store"
+		},
+		{
+			"path": "packages/ui"
+		}
+	]
+}
