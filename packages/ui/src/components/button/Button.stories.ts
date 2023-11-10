@@ -1,69 +1,52 @@
 import type {Meta,StoryObj} from '@storybook/vue3'
 import {action} from '@storybook/addon-actions'
-import IconCamera from '../icon/Camera.vue'
-import Button from './Button.Vue'
-import { ButtonIconSizes, ButtonTypes} from './Button.model'
+import MyButton from './Button.Vue'
+import {ButtonSizes} from './Button.model'
 
-const meta: Meta<typeof Button> = {
-    component: Button,
+const meta: Meta<typeof MyButton> = {
+    component: MyButton,
     title: 'Button',
     tags: ['autodocs'],
-    args: {
-        type: 'primary',
-        text: 'test',
-        icon: false,
-        iconSize: ButtonIconSizes.Normal,
-        disabled: false,
-        loading: false,
-    },
     argTypes: {
-        type: {
-            options: [ButtonTypes.Primary,ButtonTypes.Secondary,ButtonTypes.Tertiary,ButtonTypes.Quaternary],
+        backgroundColor: {
+            control: 'color',
+        },
+        onClick:{},
+        size: {
+            options: [ButtonSizes.Small,ButtonSizes.Medium,ButtonSizes.Large],
             control: { type: 'select' },
         },
-        iconSize: {
-            options: [ButtonIconSizes.Normal, ButtonIconSizes.Small],
-            control: { type: 'select' },
-        },
-    },
-    render: (args: any) => ({
-        components: { Button, IconCamera },
-        setup() {
-            const click = action('click')
-            return { args, click }
-        },
-        template: '<Button v-bind="args" @click="click"><template v-if="args.icon" #icon><IconCamera /></template>{{ args.text }}</Button>',
-    })
+    }
 }
 
 export default meta
 
-type Story = StoryObj<typeof Button>;
+type Story = StoryObj<typeof MyButton>;
 
 export const Primary: Story = {
     args: {
-        type: ButtonTypes.Primary,
-        prefix: 'Primary',
-    }
-}
+        primary: true,
+        label: 'Button',
+    },
+};
 
 export const Secondary: Story = {
     args: {
-        type: ButtonTypes.Secondary,
-        prefix: 'Secondary',
+        label: 'Button',
+    },
+};
+
+
+export const Large: Story = {
+    args: {
+        size: 'large',
+        label: 'Button',
     }
 }
 
-export const Tertiary: Story = {
+export const Small: Story = {
     args: {
-        type: ButtonTypes.Tertiary,
-        prefix: 'Tertiary',
-    }
-}
-
-export const Quaternary: Story = {
-    args: {
-        type: ButtonTypes.Quaternary,
-        prefix: 'Quaternary',
+        size: 'small',
+        label: 'Button',
     }
 }

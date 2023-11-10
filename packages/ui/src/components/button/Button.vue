@@ -1,59 +1,86 @@
-<script lang="ts" setup>
-import IconSpinner from "../icon/Spinner.vue";
-import type { ButtonIconSize, ButtonType } from "./Button.model";
-import { ButtonIconSizes, ButtonTypes } from "./Button.model";
+<template>
+  <button type="button" :class="classes" @click="onClick" :style="style">
+    {{ label }}
+  </button>
+</template>
 
-withDefaults(
-  defineProps<{
-    prefix: string;
-    type?: ButtonType;
-    iconSize?: ButtonIconSize;
-    loading?: boolean;
-    disabled?: boolean;
-  }>(),
-  {
-    type: () => ButtonTypes.Primary,
-    iconSize: () => ButtonIconSizes.Normal,
-    loading: false,
-    disabled: false,
-  }
-);
+<script>
+import { reactive, computed } from "vue";
 
-defineEmits<{
-  (e: "click"): void;
-}>();
+export default {
+  name: "my-button",
 
-const classes = {
-  primary:
-    "bg-primary text-white w-full border-primary border-2 border-solid rounded-md active:(bg-primary-700 border-primary-700)",
-  secondary:
-    "bg-transparent text-primary w-full border-primary border-2 border-solid rounded-md active:(text-primary-700 border-primary-700)",
-  tertiary:
-    "bg-white text-normal w-full border-2 border-gray-400 border-solid rounded-full",
-  quaternary:
-    "bg-white text-normal border-2 border-gray border-solid rounded-full shadow-lg",
-};
+  props: {
+    label: {
+      type: String,
+      required: true,
+    },
+    primary: {
+      type: Boolean,
+      default: false,
+    },
+    size: {
+      type: String,
+      validator: function (value) {
+        return ["small", "medium", "large"].indexOf(value) !== -1;
+      },
+    },
+    backgroundColor: {
+      type: String,
+    },
+  },
 
-const iconSizeClasses = {
-  small: "h-1 w-1",
-  normal: "h-1.5 w-1.5",
+  emits: ["click"],
+
+  setup(props, { emit }) {
+    props = reactive(props);
+    return {
+      classes: computed(() => ({
+        "storybook-button": true,
+        "storybook-button--primary": props.primary,
+        "storybook-button--secondary": !props.primary,
+        [`storybook-button--${props.size || "medium"}`]: true,
+      })),
+      style: computed(() => ({
+        backgroundColor: props.backgroundColor,
+      })),
+      onClick() {
+        emit("click");
+      },
+    };
+  },
 };
 </script>
 
-<template>
-  <button
-    :id="`${prefix}ButtonButton`"
-    class="overflow-ellipsis mb-0.5 h-3 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap p-4 text-lg transition-opacity focus:(outline-none ring)"
-    :class="[{ 'opacity-20 cursor-not-allowed': disabled }, classes[type]]"
-    :disabled="disabled"
-    @click="$emit('click')"
-  >
-    <IconSpinner v-if="loading" class="h-2 w-2" />
-    <div v-else class="flex items-center justify-center gap-0.25">
-      <div v-if="$slots.icon" :class="iconSizeClasses[iconSize]">
-        <slot name="icon" />
-      </div>
-      <slot>Button Text</slot>
-    </div>
-  </button>
-</template>
+<style scoped>
+.storybook-button {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-button--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+</style>

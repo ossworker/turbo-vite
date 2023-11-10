@@ -12,9 +12,8 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.8.1_eslint@7.32.0_rollup@2.79.1_typescript@5.2.2_vite@4.5.0/node_modules/nuxt/dist/head/runtime/plugins/unhead").default> &
   InjectionType<typeof import("../../../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.8.1_eslint@7.32.0_rollup@2.79.1_typescript@5.2.2_vite@4.5.0/node_modules/nuxt/dist/pages/runtime/plugins/router").default> &
   InjectionType<typeof import("../../../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.8.1_eslint@7.32.0_rollup@2.79.1_typescript@5.2.2_vite@4.5.0/node_modules/nuxt/dist/pages/runtime/plugins/prefetch.client").default> &
-  InjectionType<typeof import("../templates.pwa.client.08f0cb57").default> &
-  InjectionType<typeof import("../../../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+devtools@1.0.0_nuxt@3.8.1_rollup@2.79.1_vite@4.5.0/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.server").default> &
-  InjectionType<typeof import("../../../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+devtools@1.0.0_nuxt@3.8.1_rollup@2.79.1_vite@4.5.0/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.client").default> &
+  InjectionType<typeof import("../../../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+devtools@1.0.1_nuxt@3.8.1_rollup@2.79.1_vite@4.5.0/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.server").default> &
+  InjectionType<typeof import("../../../../node_modules/.pnpm/registry.npmmirror.com+@nuxt+devtools@1.0.1_nuxt@3.8.1_rollup@2.79.1_vite@4.5.0/node_modules/@nuxt/devtools/dist/runtime/plugins/devtools.client").default> &
   InjectionType<typeof import("../../../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.8.1_eslint@7.32.0_rollup@2.79.1_typescript@5.2.2_vite@4.5.0/node_modules/nuxt/dist/app/plugins/chunk-reload.client").default> &
   InjectionType<typeof import("../../../../node_modules/.pnpm/registry.npmmirror.com+nuxt@3.8.1_eslint@7.32.0_rollup@2.79.1_typescript@5.2.2_vite@4.5.0/node_modules/nuxt/dist/app/plugins/check-outdated-build.client").default>
 

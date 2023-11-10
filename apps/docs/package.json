@@ -5,7 +5,7 @@
   "author": "workoss@icloud.com",
   "license":"MIT",
   "scripts": {
-    "dev": "vitepress dev",
+    "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
   },

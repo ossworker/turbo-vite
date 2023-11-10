@@ -10,22 +10,23 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@element-plus/nuxt": "^1.0.6",
-    "@nuxt/devtools": "latest",
+    "@nuxt/devtools": "^1.0.1",
     "@pinia/nuxt": "^0.5.1",
     "@unocss/nuxt": "^0.57.2",
     "@vite-pwa/nuxt": "^0.1.2",
-    "nuxt": "^3.8.1",
-    "pinia": "^2.1.7",
-    "vue": "^3.3.8",
-    "vue-router": "^4.2.5",
+    "arco-design-nuxt-module": "^0.0.16",
     "eslint": "^7.32.0",
     "eslint-config-custom": "workspace:*",
+    "nuxt": "^3.8.1",
+    "pinia": "^2.1.7",
     "tsconfig": "workspace:*",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vue": "^3.3.8",
+    "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "element-plus": "^2.4.2",
+    "@arco-design/web-vue": "^2.53.2",
+    "arco-design-pro-vue": "^2.7.2",
     "ui": "workspace:*"
   }
 }

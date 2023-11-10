@@ -567,14 +567,14 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _fDhVajKcLw = (function(nitro) {
+const _fVneD2DWf4 = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
 const plugins = [
-  _fDhVajKcLw
+  _fVneD2DWf4
 ];
 
 function defineRenderHandler(handler) {
@@ -906,7 +906,7 @@ function createServerHead(options = {}) {
 
 const unheadPlugins = [];
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"quick web tool"},{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}],"link":[{"rel":"icon","href":"/favicon.ico","sizes":"any"}],"style":[],"script":[],"noscript":[],"title":"Quick Web","viewport":"width=device-width,initial-scale=1"};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"name":"description","content":"quick web tool"},{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}],"link":[{"rel":"icon","href":"/favicon.ico","type":"image/x-icon"}],"style":[],"script":[],"noscript":[],"title":"Quick Web","viewport":"width=device-width,initial-scale=1"};
 
 const appRootId = "__nuxt";
 

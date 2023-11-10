@@ -7,7 +7,7 @@ export default defineNuxtConfig ({
     '@nuxt/devtools',
     "@unocss/nuxt",
     "@vite-pwa/nuxt",
-    "@element-plus/nuxt",
+    "arco-design-nuxt-module",
   ],
   alias,
   css: [
@@ -25,12 +25,18 @@ export default defineNuxtConfig ({
       exclude: ['pinia'],
     },
   },
+  arco: {
+    importPrefix: 'A',
+    hookPrefix: 'Arco',
+    locales: ['getLocale'],
+    localePrefix: 'Arco',
+  },
   app: {
     head: {
       title: 'Quick Web',
       viewport: 'width=device-width,initial-scale=1',
       link: [
-        { rel: 'icon', href: '/favicon.ico', sizes: 'any' },
+        { rel: 'icon', href: '/favicon.ico', type: 'image/x-icon' },
       ],
       meta: [
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

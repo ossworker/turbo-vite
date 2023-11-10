@@ -1,16 +1,9 @@
 type ObjectValues<T> = T[keyof T]
 
-export const ButtonTypes = {
-  Primary: 'primary',
-  Secondary: 'secondary',
-  Tertiary: 'tertiary',
-  Quaternary: 'quaternary',
-} as const
-
-export const ButtonIconSizes = {
+export const ButtonSizes = {
   Small: 'small',
-  Normal: 'normal',
+  Medium: 'medium',
+  Large: 'large',
 } as const
 
-export type ButtonType = ObjectValues<typeof ButtonTypes>
-export type ButtonIconSize = ObjectValues<typeof ButtonIconSizes>
+export type ButtonSize = ObjectValues<typeof ButtonSizes>
